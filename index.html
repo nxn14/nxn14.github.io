@@ -8,6 +8,16 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+
+    <!-- Google map winget -->
+    <style>
+      #map {
+        width: 500px;
+        height: 400px;
+      }
+    </style>
+
+
   </head>
   <body>
     <section class="page-header">
@@ -32,6 +42,20 @@
 </ul>
 
 <hr>
+
+<div id="map"></div>
+    <script>
+      function initMap() {
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+          center: {lat: 44.540, lng: -78.546},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
+        
 
 <p>The relative use of each type looks like this:</p>
 
